@@ -1,0 +1,20 @@
+<div *ngIf="wishes.length === 0; else showItems">
+  <p>There are no items... {{isim}}</p>
+</div>
+
+<ng-template #showItems>
+
+  
+
+  <ul class="wish-list flex flex-col gap-1">
+
+    <wish-list-item *ngFor="let wish of wishes" [wish]="wish">
+      
+    </wish-list-item>
+
+
+
+
+    
+  </ul>
+</ng-template>

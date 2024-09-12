@@ -1,0 +1,16 @@
+<li>
+  <div class="form-check border rounded w-64 flex items-center justify-center gap-4 px-4">
+    <label class="form-check-label flex items-center gap-4 p-4 cursor-pointer h-full w-full" [ngClass]="wish.isComplete ? 'text-gray-500 line-through' : 'text-red-700'">
+      <input 
+        class="checkbox"
+        type="checkbox"
+        [checked]="wish.isComplete"
+        (click)="toggleFullfilled()"
+      />
+      {{wish.wishText}}
+    </label>
+    <button class="text-red-500 cursor-pointer" (click)="removeWish()">
+      X
+    </button>
+  </div>
+</li>

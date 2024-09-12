@@ -1,0 +1,18 @@
+<form class="w-full flex items-center justify-center bg-gray-50 gap-12 h-24">
+  <div class="flex items-center justify-center gap-4">
+    <label>Add a wish: </label>
+    <input 
+      class=" hover:bg-slate-100 p-4 transition rounded ring-2 ring-gray-400"
+      [(ngModel)] = "newWishText"
+      name="idk"
+    />
+  </div>
+  <div class="">
+    <button 
+      class="cursor-pointer w-24 rounded bg-gray-300 hover:bg-gray-600 transition"
+      (click)="$event.preventDefault(); addNewWish()"
+    >
+      Add Wish
+    </button>
+  </div>
+</form>
